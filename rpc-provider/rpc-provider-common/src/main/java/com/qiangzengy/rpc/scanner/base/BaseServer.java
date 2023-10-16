@@ -1,7 +1,7 @@
-package com.qiangzengy.rpc.provider.comon.base;
+package com.qiangzengy.rpc.scanner.base;
 
-import com.qiangzengy.rpc.provider.comon.api.Server;
-import com.qiangzengy.rpc.provider.comon.handler.RpcProviderHandler;
+import com.qiangzengy.rpc.scanner.handler.RpcProviderHandler;
+import com.qiangzengy.rpc.scanner.api.Server;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

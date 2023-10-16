@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * 服务消费者注解
  * @author qiangzengy@gmail.com
  * @date 2023/5/4
  */

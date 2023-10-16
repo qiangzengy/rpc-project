@@ -1,4 +1,4 @@
-package com.qiangzengy.rpc.provider.comon.api;
+package com.qiangzengy.rpc.scanner.api;
 
 /**
  * @author qiangzengy@gmail.com

@@ -1,8 +1,8 @@
 package com.qiangzengy.rpc.common.scanner;
 
 import com.qiangzengy.rpc.annotation.RpcService;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public class RpcServiceScanner extends ClassScanner{
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RpcServiceScanner.class);
+    private static final Logger log = LoggerFactory.getLogger(RpcServiceScanner.class);
 
     /**
      * 扫描指定包下的类，并筛选使用@RpcService注解标注的类
@@ -33,13 +33,13 @@ public class RpcServiceScanner extends ClassScanner{
                 className -> {
                     try {
                         Class<?> clazz = Class.forName(className);
-                        LOGGER.debug("Class =======> :{}",clazz.getName());
+                        log.info("Class =======> :{}",clazz.getName());
                         RpcService rpcService = clazz.getAnnotation(RpcService.class);
                         if (rpcService != null){
-                            LOGGER.debug("rpcService=========>:{}",rpcService.getClass().getName());
+                            log.info("rpcService=========>:{}",rpcService.getClass().getName());
                         }
                     } catch (Exception e) {
-                        LOGGER.error("scan classes throws exception: {}", e);
+                        log.error("scan classes throws exception:", e);
                     }
                 }
         );

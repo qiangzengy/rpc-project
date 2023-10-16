@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.qiangzengy.rpc</groupId>
             <artifactId>rpc-annotation</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

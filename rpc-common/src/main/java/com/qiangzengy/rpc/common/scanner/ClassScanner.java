@@ -2,6 +2,7 @@ package com.qiangzengy.rpc.common.scanner;
 
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.net.JarURLConnection;
 import java.net.URL;
@@ -13,6 +14,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
+ * 通用类扫描器
  * @author qiangzengy@gmail.com
  * @date 2023/5/4
  */
@@ -79,13 +81,20 @@ public class ClassScanner {
         File file = new File(packagePath);
         // 如果不存在或者不是一个目录，return
         if (!file.exists() || !file.isDirectory()) {
+            System.out.println("+++++"+file);
             return;
         }
         // 获取包下的所有文件(包括目录)
         File[] files = file.listFiles(
                 // 自定义过滤规则 如果可以循环（包含子目录）或以.class结尾的文件
-                (pathname) -> (recursive && pathname.isDirectory()) || (file.getName().endsWith(".class"))
-        );
+                (pathname) -> (recursive && pathname.isDirectory()) || (pathname.getName().endsWith(CLASS_FILE_SUFFIX))
+//                new FileFilter() {
+//                    //自定义过滤规则 如果可以循环(包含子目录) 或则是以.class结尾的文件(编译好的java类文件)
+//                    public boolean accept(File file1) {
+//                        return (recursive && file1.isDirectory()) || (file1.getName().endsWith(CLASS_FILE_SUFFIX));
+//                    }
+//                }
+                );
         // 循环所有的文件
         for (File newFile : files) {
             if (newFile.isDirectory()) {
@@ -98,7 +107,7 @@ public class ClassScanner {
             } else {
                 // 去掉.class,获取类名
                 String className = newFile.getName().substring(0, newFile.getName().length() - 6);
-                classNameList.add(className);
+                classNameList.add(packageName + "." + className);
             }
         }
     }

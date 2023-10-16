@@ -1,4 +1,4 @@
-package com.qiangzengy.rpc.provider.comon.handler;
+package com.qiangzengy.rpc.scanner.handler;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

@@ -36,6 +36,11 @@ public class RpcServiceScanner extends ClassScanner{
                         log.info("Class =======> :{}",clazz.getName());
                         RpcService rpcService = clazz.getAnnotation(RpcService.class);
                         if (rpcService != null){
+                            String serviceName = getServiceName(rpcService);
+                            String key = serviceName.concat(rpcService.version()).concat(rpcService.group());
+                            // 将标注了@RpcService注解的类存放到Map中，key为serviceName+version+group
+                            // Value为标注了@@RpcService的类
+                            map.put(key,clazz.newInstance());
                             log.info("rpcService=========>:{}",rpcService.getClass().getName());
                         }
                     } catch (Exception e) {
@@ -43,7 +48,23 @@ public class RpcServiceScanner extends ClassScanner{
                     }
                 }
         );
-        return null;
+        return map;
+    }
+
+    /**
+     * 获取serviceName
+     */
+    private static String getServiceName(RpcService rpcService){
+        //优先使用interfaceClass
+        Class clazz = rpcService.interfaceClass();
+        if (clazz == null || clazz == void.class){
+            return rpcService.interClassName();
+        }
+        String serviceName = clazz.getName();
+        if (serviceName == null || serviceName.trim().isEmpty()){
+            serviceName = rpcService.interClassName();
+        }
+        return serviceName;
     }
 
 }

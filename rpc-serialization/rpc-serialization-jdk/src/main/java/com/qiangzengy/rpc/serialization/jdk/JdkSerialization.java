@@ -2,7 +2,6 @@ package com.qiangzengy.rpc.serialization.jdk;
 
 import com.qiangzengy.rpc.common.exception.SerializationException;
 import com.qiangzengy.rpc.serialization.api.Serialization;
-import org.apache.tools.ant.taskdefs.Echo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +24,7 @@ public class JdkSerialization implements Serialization {
             throw new SerializationException("serialize obj is null");
         }
         try{
+            logger.error("使用jdk序列化========");
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
             objectOutputStream.writeObject(obj);

@@ -4,58 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89050e26-2c90-4576-a389-0f336f27270d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-codec/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-codec/src/main/java/com/qiangzengy/rpc/codec/RpcCodec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-codec/src/main/java/com/qiangzengy/rpc/codec/RpcDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-codec/src/main/java/com/qiangzengy/rpc/codec/RpcEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/qiangzengy/rpc/common/exception/SerializationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/qiangzengy/rpc/common/id/IdFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/qiangzengy/rpc/common/utils/SerializationUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-constants/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-constants/src/main/java/com/qiangzengy/rpc/constants/RpcConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/RpcProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/base/RpcMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/enums/RpcType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/header/RpcHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/header/RpcHeaderFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/request/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/qiangzengy/rpc/protocol/response/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-provider/rpc-provider-native/src/main/java/com/qiangzengy/rpc/provider/RpcSingleServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-api/src/main/java/com/qiangzengy/rpc/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-api/src/main/java/com/qiangzengy/rpc/serialization/api/Serialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-api/src/test/java/com/qiangzengy/rpc/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-jdk/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-jdk/src/main/java/com/qiangzengy/rpc/serialization/jdk/JdkSerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-consumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-consumer/rpc-test-consumer-codec/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-consumer/rpc-test-consumer-codec/src/main/java/com/qiangzengy/rpc/consumer/codec/RpcTestConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-consumer/rpc-test-consumer-codec/src/main/java/com/qiangzengy/rpc/consumer/codec/handler/RpcTestConsumerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-consumer/rpc-test-consumer-codec/src/main/java/com/qiangzengy/rpc/consumer/codec/init/RpcTestConsumerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-consumer/rpc-test-consumer-codec/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-provider/src/main/java/com/qiangzengy/rpc/test/provider/service/DemoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-provider/src/main/java/com/qiangzengy/rpc/test/provider/service/impl/ProviderDemoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-provider/src/main/java/com/qiangzengy/rpc/test/provider/single/RpcSingServerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-test/rpc-test-provider/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="89050e26-2c90-4576-a389-0f336f27270d" name="Changes" comment="数据收发">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/qiangzengy/rpc/common/scanner/RpcServiceScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/qiangzengy/rpc/common/scanner/RpcServiceScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/qiangzengy/rpc/common/scanner/RpcServiceScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/qiangzengy/rpc/common/scanner/RpcServiceScanner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/src/main/java/com/qiangzengy/rpc/scanner/api/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/src/main/java/com/qiangzengy/rpc/provider/common/server/api/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/src/main/java/com/qiangzengy/rpc/scanner/base/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/src/main/java/com/qiangzengy/rpc/provider/common/server/base/BaseServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/src/main/java/com/qiangzengy/rpc/scanner/handler/RpcProviderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/src/main/java/com/qiangzengy/rpc/provider/common/handler/RpcProviderHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/target/classes/com/qiangzengy/rpc/scanner/api/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/target/classes/com/qiangzengy/rpc/scanner/base/BaseServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/target/classes/com/qiangzengy/rpc/scanner/base/BaseServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-common/target/classes/com/qiangzengy/rpc/scanner/handler/RpcProviderHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-provider/rpc-provider-native/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-provider/rpc-provider-native/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-test/rpc-test-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-test/rpc-test-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-api/src/main/java/com/qiangzengy/rpc/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-api/src/test/java/com/qiangzengy/rpc/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-jdk/src/main/java/com/qiangzengy/rpc/serialization/jdk/JdkSerialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/rpc-serialization-jdk/src/main/java/com/qiangzengy/rpc/serialization/jdk/JdkSerialization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,8 +211,17 @@
       <workItem from="1697788098285" duration="16245000" />
       <workItem from="1698298940301" duration="1807000" />
       <workItem from="1698310420360" duration="3389000" />
-      <workItem from="1698821747398" duration="6344000" />
+      <workItem from="1698821747398" duration="9070000" />
     </task>
+    <task id="LOCAL-00001" summary="数据收发">
+      <option name="closed" value="true" />
+      <created>1698832409765</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698832409765</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,20 +238,9 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/rpc-test/rpc-test-provider/src/main/java/com/qiangzengy/rpc/test/provider/single/RpcSingServerTest.java</url>
-          <line>12</line>
-          <properties class="com.qiangzengy.rpc.test.provider.single.RpcSingServerTest" method="startSingleServer">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="数据收发" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据收发" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

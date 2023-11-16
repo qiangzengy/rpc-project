@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rpc-provider-native" />
         <module name="rpc-protocol" />
         <module name="rpc-common" />
-        <module name="rpc-test-provider" />
+        <module name="rpc-test-consumer-handler" />
         <module name="rpc-serialization-api" />
         <module name="rpc-test-consumer-codec" />
-        <module name="rpc-constants" />
         <module name="rpc-provider-common" />
+        <module name="rpc-test-api" />
+        <module name="rpc-provider-native" />
+        <module name="rpc-test-provider" />
+        <module name="rpc-consumer-common" />
+        <module name="rpc-constants" />
         <module name="rpc-codec" />
         <module name="rpc-annotation" />
         <module name="rpc-test-scanner" />
+        <module name="rpc-consumer" />
         <module name="rpc-serialization-jdk" />
       </profile>
     </annotationProcessing>

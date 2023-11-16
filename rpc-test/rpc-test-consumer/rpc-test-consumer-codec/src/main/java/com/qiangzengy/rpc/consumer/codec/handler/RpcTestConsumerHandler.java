@@ -31,10 +31,10 @@ public class RpcTestConsumerHandler extends SimpleChannelInboundHandler<RpcProto
         RpcProtocol<RpcRequest> protocol = new RpcProtocol<>();
         protocol.setHeader(RpcHeaderFactory.getRequestHeader("jdk", RpcType.REQUEST.getType()));
         RpcRequest request = new RpcRequest();
-        request.setClassName("com.qiangzengy.rpc.test.provider.service.ProviderDemo");
+        request.setClassName("com.qiangzengy.rpc.test.api.DemoService");
         request.setGroup("qiangzeng");
         request.setMethodName("sayHell");
-        request.setParameters(new Object[]{});
+        request.setParameters(new Object[]{"qiangzeng"});
         request.setParameterTypes(new Class[]{String.class});
         request.setVersion("1.0.0");
         request.setAsync(false);

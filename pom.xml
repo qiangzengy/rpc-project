@@ -18,6 +18,9 @@
         <module>rpc-constants</module>
         <module>rpc-serialization</module>
         <module>rpc-codec</module>
+        <module>rpc-test/rpc-test-api</module>
+        <module>rpc-consumer</module>
+        <module>rpc-consumer/rpc-consumer-common</module>
     </modules>
 
     <properties>

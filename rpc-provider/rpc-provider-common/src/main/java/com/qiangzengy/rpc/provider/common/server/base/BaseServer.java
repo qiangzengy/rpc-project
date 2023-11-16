@@ -2,6 +2,7 @@ package com.qiangzengy.rpc.provider.common.server.base;
 
 import com.qiangzengy.rpc.codec.RpcDecoder;
 import com.qiangzengy.rpc.codec.RpcEncoder;
+import com.qiangzengy.rpc.constants.RpcConstants;
 import com.qiangzengy.rpc.provider.common.handler.RpcProviderHandler;
 import com.qiangzengy.rpc.provider.common.server.api.Server;
 import io.netty.bootstrap.ServerBootstrap;
@@ -35,12 +36,15 @@ public class BaseServer implements Server {
 
     protected Map<String,Object> handlerMap = new HashMap<>();
 
-    public BaseServer(String serverAddress) {
+    private String reflectType;
+
+    public BaseServer(String serverAddress, String reflectType) {
         if (StringUtils.isNotEmpty(serverAddress)){
             String[] split = serverAddress.split(":");
             this.host = split[0];
             this.port = Integer.parseInt(split[1]);
         }
+        this.reflectType = reflectType;
     }
 
     /**
@@ -82,7 +86,7 @@ public class BaseServer implements Server {
                                     .addLast(new RpcDecoder())
                                     // 自定义的编码
                                     .addLast(new RpcEncoder())
-                                    .addLast(new RpcProviderHandler(handlerMap))
+                                    .addLast(new RpcProviderHandler(handlerMap, reflectType))
                             ;
                         }
                     })

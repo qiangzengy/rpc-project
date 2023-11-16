@@ -1,6 +1,7 @@
 package com.qiangzengy.rpc.common.scanner;
 
 import com.qiangzengy.rpc.annotation.RpcService;
+import com.qiangzengy.rpc.common.helper.RpcServiceHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +38,8 @@ public class RpcServiceScanner extends ClassScanner{
                         RpcService rpcService = clazz.getAnnotation(RpcService.class);
                         if (rpcService != null){
                             String serviceName = getServiceName(rpcService);
-                            String key = serviceName.concat(rpcService.version()).concat(rpcService.group());
+                            //String key = serviceName.concat(rpcService.version()).concat(rpcService.group());
+                            String key = RpcServiceHelper.buildServiceKey(serviceName,rpcService.version(),rpcService.group());
                             // 将标注了@RpcService注解的类存放到Map中，key为serviceName+version+group
                             // Value为标注了@@RpcService的类
                             map.put(key,clazz.newInstance());

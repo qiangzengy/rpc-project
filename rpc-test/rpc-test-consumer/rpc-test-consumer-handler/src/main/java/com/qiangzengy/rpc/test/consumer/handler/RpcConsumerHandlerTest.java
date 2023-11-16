@@ -1,6 +1,7 @@
 package com.qiangzengy.rpc.test.consumer.handler;
 
 import com.qiangzengy.rpc.consumer.common.RpcConsumer;
+import com.qiangzengy.rpc.consumer.common.callback.AsyncRpcCallback;
 import com.qiangzengy.rpc.consumer.common.future.RpcFuture;
 import com.qiangzengy.rpc.protocol.RpcProtocol;
 import com.qiangzengy.rpc.protocol.enums.RpcType;
@@ -35,7 +36,19 @@ public class RpcConsumerHandlerTest {
         request.setOneway(false);
         protocol.setBody(request);
         RpcFuture rpcFuture = consumer.sendRequest(protocol);
+        rpcFuture.addCallback(new AsyncRpcCallback() {
+            @Override
+            public void onSuccess(Object o) {
+                logger.info("从服务消费者获取到的数据===>"+o);
+            }
+
+            @Override
+            public void onException(Exception e) {
+                logger.info("从服务消费者获取到的数据异常===>"+e);
+            }
+        });
         logger.info("从服务消费者获取到的数据===>>{}",rpcFuture.get());
+        Thread.sleep(2000);
         consumer.close();
 
     }

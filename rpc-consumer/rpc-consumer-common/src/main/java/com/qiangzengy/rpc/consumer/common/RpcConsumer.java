@@ -3,6 +3,7 @@ package com.qiangzengy.rpc.consumer.common;
 import com.qiangzengy.rpc.consumer.common.future.RpcFuture;
 import com.qiangzengy.rpc.consumer.common.handler.RpcConsumerHandler;
 import com.qiangzengy.rpc.consumer.common.initializer.RpcConsumerInitializer;
+import com.qiangzengy.rpc.consumer.common.threadpool.ClientThreadPool;
 import com.qiangzengy.rpc.protocol.RpcProtocol;
 import com.qiangzengy.rpc.protocol.request.RpcRequest;
 import io.netty.bootstrap.Bootstrap;
@@ -58,6 +59,7 @@ public class RpcConsumer {
 
     public void close(){
         eventExecutors.shutdownGracefully();
+        ClientThreadPool.shutdown();
     }
 
     public RpcFuture sendRequest(RpcProtocol<RpcRequest> protocol) throws InterruptedException {
